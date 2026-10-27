@@ -1,0 +1,67 @@
+**1. Select:**
+
+> 🟦 **Wi-Fi: en0**
+
+That's the one highlighted at the top of your screenshot.
+
+**DO NOT select:**
+- Ethernet `en4/en5/en6` — unless you're actually using an Ethernet cable
+
+### 2. Start capturing
+
+Simply **double-click `Wi-Fi: en0`**.
+
+You should now see packets scrolling like:
+
+```text
+No.    Time      Source        Destination       Protocol
+1      ...       ...           ...               TCP
+2      ...       ...           ...               TLS
+3      ...       ...           ...               TCP
+```
+
+### Step 1
+Double-click:
+
+**Wi-Fi: en0**
+
+### Step 2
+Let packets start appearing.
+
+### Step 3
+Open your browser and go to the website your teacher specified:
+
+- Facebook
+- Instagram
+- YouTube
+
+### Step 4
+Log in to your account.
+
+### Step 5
+Come back to Wireshark and click the **red Stop button ⏹️**.
+
+### Step 6
+At the top, in the **Display Filter** box, type:
+
+```text
+tcp
+```
+
+Press **Enter**.
+
+Now you'll see only TCP packets.
+
+### Step 7 — Save it
+
+Go to:
+
+**File → Save As**
+
+Name it:
+
+```text
+facebook_tcp.pcapng
+```
+
+and save it somewhere easy, such as your Desktop.
