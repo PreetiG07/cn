@@ -1,0 +1,17 @@
+import socket
+
+# Create TCP socket
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Connect to server
+client.connect(('localhost', 12345))
+
+# Receive message from server
+message = client.recv(1024).decode()
+print("Server says:", message)
+
+# Send message to server
+client.send("Hello from Client".encode())
+
+# Close connection
+client.close()
