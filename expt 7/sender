@@ -1,0 +1,33 @@
+import socket
+
+# Create UDP socket
+sender = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+# Receiver IP address and port
+receiver_ip = input("Enter receiver IP address: ")
+
+receiver_address = (receiver_ip, 5000)
+
+# File to send
+file_name = input("Enter file name: ")
+
+# Send file name
+sender.sendto(file_name.encode(), receiver_address)
+
+# Open file in binary mode
+with open(file_name, "rb") as file:
+
+    while True:
+        data = file.read(4096)
+
+        if not data:
+            break
+
+        sender.sendto(data, receiver_address)
+
+# Send end-of-file message
+sender.sendto(b"EOF", receiver_address)
+
+print("File sent successfully!")
+
+sender.close()
