@@ -1,0 +1,16 @@
+Step 1: Open two terminals.
+
+Step 2: Run the server program first:
+Server is waiting for connection...
+
+Step 3: Run the client program.
+
+You will get:
+
+Server:
+Server is waiting for connection...
+Client connected!
+Client says: Hello from Client
+
+Client:
+Server says: Hello from Server
