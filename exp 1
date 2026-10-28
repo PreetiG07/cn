@@ -1,0 +1,10 @@
+ping google.com
+ipconfig
+getmac
+hostname
+tracert google.com (Yaha per enter karne ne output chalte gya toh ctrl + c karna)
+netstat
+netstat -a
+netstat -b
+arp -a
+systeminfo
